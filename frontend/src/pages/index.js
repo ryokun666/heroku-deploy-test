@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [message, setMessage] = useState("");
   useEffect(() => {
-    fetch("http://127.0.0.1:3001/api")
+    fetch("/api")
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
