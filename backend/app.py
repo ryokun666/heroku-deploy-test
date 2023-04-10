@@ -8,7 +8,7 @@ port = os.environ.get("PORT") or 3001
 
 @app.route("/api")
 def api():
-    return jsonify({"message": "Hello World!"})
+    return jsonify({"message": "PythonファイルのAPI連携成功ダ！！！"})
 
 
 @app.route("/", defaults={"path": ""})
