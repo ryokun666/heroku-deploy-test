@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd backend && source venv/bin/activate && Python3 app.py",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "heroku-prebuild": "cd backend && pip install -r requirements.txt",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
