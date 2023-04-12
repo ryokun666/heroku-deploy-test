@@ -1,1 +1,1 @@
-web: gunicorn app:app --log-file=-
+web: npm run start:frontend & npm run start:backend
