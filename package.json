@@ -4,16 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "heroku-prebuild": "cd backend && pip install -r requirements.txt",
-    "heroku-postbuild": "npm run build"
+    "start:frontend": "npm start --prefix frontend",
+    "start:backend": "cd backend && source venv/bin/activate && python3 app.py"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+  "license": "ISC"
 }
