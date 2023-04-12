@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:frontend": "npm start --prefix frontend",
+    "start:frontend": "cd frontend && npm start --prefix frontend",
     "start:backend": "cd backend && . venv/bin/activate && python app.py"
   },
   "keywords": [],
