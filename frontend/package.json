@@ -2,19 +2,31 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:3001",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "heroku-postbuild": "npm run export"
   },
   "dependencies": {
     "@next/font": "13.3.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
+    "next-http-proxy-middleware": "^1.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://127.0.0.1:5000",
+      "changeOrigin": true,
+      "secure": false
+    }
   }
 }

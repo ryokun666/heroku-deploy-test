@@ -1,0 +1,11 @@
+{
+  "root": "out",
+  "routes": {
+    "/**": "index.html"
+  },
+  "proxies": {
+    "/api": {
+      "origin": "https://front-react-back-node3.herokuapp.com"
+    }
+  }
+}
